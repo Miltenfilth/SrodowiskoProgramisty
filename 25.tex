@@ -1,7 +1,9 @@
-\documentclass[12pt,a4paper]{article}
-
+\documentclass{beamer}
+\usetheme{default}
+\setbeamertemplate{theorems}[numbered]
+\usecolortheme{lily}
 % ustawienia marginesu
-\usepackage[left=1.6in,right=.8in,top=1.5in,bottom=1.5in]{geometry}
+%\usepackage[left=1.6in,right=.8in,top=1.5in,bottom=1.5in]{geometry}
 
 % polskie reguły dzielenia wyrazów itd
 \usepackage{polski}
@@ -10,7 +12,7 @@
 \usepackage[utf8]{inputenc}
 
 % automatyczne generowanie odnośników w plikach PDF
-\usepackage[pdftex,linkbordercolor={0 0.9 1}]{hyperref}
+%\usepackage[pdftex,linkbordercolor={0 0.9 1}]{hyperref}
 
 % pakiety matematyczne
 \usepackage{amsthm,amsmath,amsfonts,amssymb,mathrsfs}
@@ -66,20 +68,31 @@
 \date{30 listopada 2010}
 
 \begin{document}
-\maketitle
-\tableofcontents
+\begin{frame}{funkcje ciągłe i różniczkowalne}
+\titlepage
+\end{frame}
+
+\begin{frame}{Funkcie Ciągłe}
+
+\end{frame}
+
 
 
 \section{Funkcje ciągłe}
+\begin{frame}{Funkcje ciągłe}
 	\begin{df}
 		(funkcja ciągła). Niech $f : (a,b) \rightarrow \R$, oraz niech $x_0 \in (a,b)$. %
 		Mówimy, że funkcja $f$ jest ciągła w punkcie $x_0$ wtedy i tylko wtedy, gdy:\\
 
 	$\forall_{\epsilon > 0} \exists_{ \delta > 0} \forall x \in (a,b) |x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon$.
 	\end{df}
+\end{frame}
+\begin{frame}{Funkcje ciągłe}
 	\begin{ex}
 		Wielomiany, funkcje trygonometrycznem wykładnicze, logarytmiczne są ciągłe w każdym punkcje swojej dziedziny.
 	\end{ex}
+\end{frame}
+\begin{frame}{Funkcje ciągłe}
 	\begin{ex}
 		Funkcja $f$ dana wzorem:\\
 	\begin{displaymath} 
@@ -92,6 +105,8 @@
 		Niech $\Q$ oznacza zbiór wszystkich liczb wymiernych.\\
 
 	\end{ex}
+\end{frame}
+\begin{frame}{Funkcje ciągłe}
 	\begin{ex}
 		Funkcja $f$ dana wzorem:\\
 		\begin{displaymath} 
@@ -102,6 +117,8 @@
  		\end{displaymath}
 		nie jest ciągła w żadnym punkcie.\\
 	\end{ex}
+\end{frame}
+\begin{frame}{Funkcje ciągłe}
 	\begin{ex}
 		Funkcja $f$ dana wzorem:\\
 		\begin{displaymath} 
@@ -112,15 +129,21 @@
  		\end{displaymath}
 		jest ciagla w punkcie $x_0 = 0$, ale nie jest ciągła w pozostałych punktach dziedziny.\\
 	\end{ex}
+\end{frame}
+\begin{frame}{Funkcje ciągłe}
 	\begin{zad}
 		Udowodnij prawdziwość podanych przykładów.\\
 	\end{zad}
+\end{frame}
+\begin{frame}{Funkcje ciągłe}
 	\begin{df}
 		Jeśli funkcja $f:  A \rightarrow \R$ jest ciągła w każdym punkcie swojej dziedziny $A$ to mówimy krótko, że jest ciągła.
 
 
 		Poniższe twierdzenie zbiera podstawowe włsności zbioru funkcji ciągłych.\\
 	\end{df}
+\end{frame}
+\begin{frame}{Funkcje ciągłe}
 	\begin{tw}
 		Niech funkcje $f,g: R \rightarrow \R$ będą ciągłe, oraz niech $\alpha, \beta \in \R$.\\
 		Wtedy funkcje:
@@ -131,16 +154,25 @@
 			\item[d)] $h_4(x)=f(g(x))$,
 		\end{enumerate}
 		są ciągłe.
-
+	\end{tw}
+\end{frame}
+\begin{frame}{Funkcje ciągłe}
 
 		Następne twierdzenie zwane powszechnie "własnością Darboux" lub twierdzeniem o wartości pośredniej ma liczne praktyczne zastosowania. Mówi ono o tym, że jeśli funkcja ciągła przyjmuje jakieś dwie wartości, to przy odpowiednich założeniach co do dziedziny, przyjmuje  też wszystkie wartości pośrednie. Możemy sobie to łatwo wyobrazić na przykładzie funkcji, która opisuje zmianę temperatury w czasie. Jeśli o 7:00 było $-1\,^{\circ}\mathrm{C}$ a o 9:00 było $2\,^{\circ}\mathrm{C}$ to zapewne gdzieś między 7:00 a 9:00 był taki moment, że temperatura wynosiła dokładnie $0\,^{\circ}\mathrm{C}$.
 
-	\end{tw}
+	
+\end{frame}
+\begin{frame}{Funkcje ciagłe}
 	\begin{tw}
 		Niech $f:[a,b] \rightarrow \R$ ciągła, oraz niech $f(a) \neq f(b)$. Wtedy dla dowolnego $y_0 \in conv\{f(a),f(b)\}$ istnieje $x_0 \in [a,b]$ takie, że $f(x_0)=y_0$.
 	\end{tw}
+\end{frame}
 \section{Różniczkowalność}
 
+\begin{frame}{Różniczkowalność}
+
+\end{frame}
+\begin{frame}{Różniczkowalność}
 	\begin{df}
 		Niech $f:(a,b) \rightarrow \R, x_0 \in (a,b)$ oraz $f$ ciągła w otoczeniu punktu $x_0$. Jeśli istnieje granica:\\
 		\begin{displaymath}
@@ -149,19 +181,27 @@
 
 i jest skończonam to oznaczamy ją przez $f'(x_0)$ i nazywamy pochodną funkcji $f$ w punkcie $x_0$.
 	\end{df}
+\end{frame}
+\begin{frame}{Różniczkowalność}
 	\begin{df}
 		Jeśli funkcja $f$ posiada pochodną w każdym punkcie swojej dziedziny, to mówimy, że $f$ jest różniczkowalna. Istnieje wtedy funkcja $f'$, która każdemu punktowi z dziedziny funkcji $f$ przyporządkowuje wartość pochodnej funkcji $f$ w tym punkcie.
 	\end{df}
+\end{frame}
+\begin{frame}{Różniczkowalność}
 	\begin{ex}
 		Wielomiany, funkcje trygonometryczne, wykładnicze, kogarytmiczne są różniczkowalne w każdym punkcie dziedziny.
 	\end{ex}
+\end{frame}
+\begin{frame}{Różniczkowalność}
 	\begin{ex}
 		Funkcja $f(x)=|x|$ jest ciągła, ale nie posiada pochodnej w punkcie $x_0=0$.	
 	\end{ex}
+\end{frame}
+\begin{frame}{Różniczkowalność}
 	\begin{tw}
 		Niech $f: [a,b] \rightarrow \R$ ciągła i różniczkowalna na $(a,b)$. Dodatkowo niech $f'(x) \neq 0 dla x\in (a,b)$, oraz niech $m=min_{x\in [a,b]} f(x), M=max_{x \in [a,b]}f(x).$\\
 Wtedy na pewno $f(a)=m, f(b)=M$ lub $f(a)=M$ i $f(b)=m$.
 	\end{tw}
-		
+\end{frame}
 
 \end{document}
